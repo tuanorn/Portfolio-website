@@ -19,9 +19,9 @@ function PPP() {
         }, {
             "Title": "Programming",
             "ImgSrc": "Programming.jpg",
-            "Text": "Offered a world of unlimited possibility, a 10-year-old child cannot help but delve into it and realize his imagination. I was given such opportunities and maintained the endeavors to create a commercial game of my own ever since. Now I also seek to diversify my skills into lower levels of programming"
+            "Text": "Offered a world of unlimited possibility, a 10-year-old child cannot help but delve into it and realize his imagination. I was given such opportunities and maintained the endeavors to create a commercial game of my own ever since. Now I also seek to diversify my skills into lower levels of programming."
         }, {
-            "Title": "Printer Circuit Boards",
+            "Title": "Printed Circuit Boards",
             "ImgSrc": "PCB.jpg",
             "Text": "It is intricate how a piece of silicon can exert so much of a wonder, from simple robots to full-blown ultra graphics. Thus, I am intrigue in exploring such a powerful device."
         }]
