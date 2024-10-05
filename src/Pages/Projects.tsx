@@ -1,8 +1,15 @@
-import { Link } from "react-router-dom";
-import { Accordion, Button, Card, Table, Tabs, Timeline } from "flowbite-react";
-import { useState } from "react";
+import { Link, Route, Routes, useNavigate } from "react-router-dom";
+import { Accordion, Button, Card, Table, Tabs, TabsRef, Timeline } from "flowbite-react";
+import { useEffect, useRef, useState } from "react";
 
-function PPP() {
+function PPP(props: any) {
+    const navigate = useNavigate();
+    const tabsRef = useRef<TabsRef>(null);
+    const [activeTab, setActiveTab] = useState(0);
+    useEffect(() => {
+        tabsRef.current?.setActiveTab(parseInt(props.tabIndex));
+        console.log(props.tabIndex, activeTab, tabsRef.current);
+    }, [props.tabIndex]);    
     let pppPgStruct: {[key: string]: any} = {
         "Brainstorming": [{
             "Title": "Airplanes",
@@ -89,20 +96,27 @@ function PPP() {
             </Timeline.Content>
         </Timeline.Item>
     });
-    menuItems.push(<Tabs.Item active title="Brainstorming">
-        {brainstormingItems} 
+    menuItems.push(<Tabs.Item active title="Brainstorming" onFocus={() => {
+            console.log("Focused");
+            navigate("projects/PPP/brainstorming");
+        }}>
+        {brainstormingItems}
     </Tabs.Item>)
-    menuItems.push(<Tabs.Item active title="Driving Questions">
-        {makeDrivingQList()} 
+    menuItems.push(<Tabs.Item active title="Driving Questions" onFocus={() => {
+            navigate("projects/PPP/DQs");
+        }}>
+        {makeDrivingQList()}
     </Tabs.Item>)
-    menuItems.push(<Tabs.Item active title="Progress">
+    menuItems.push(<Tabs.Item active title="Progress" onFocus={() => {
+            navigate("projects/PPP/progress");
+        }}>
         <p className="text-xl mb-3"><b>Timeline</b></p>
         <Timeline>
             {timelineItems}
         </Timeline>
     </Tabs.Item>)
     return <>
-        <Tabs className="gap-1">
+        <Tabs className="gap-1" ref={tabsRef} onActiveTabChange={(tab) => setActiveTab(tab)}>
             {menuItems}
         </Tabs>
     </>
