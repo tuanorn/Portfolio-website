@@ -1,6 +1,6 @@
 import Home from "./Home";
 import Games from "./Games";
-import {Projects, PPP} from "./Projects";
+import { Projects, PPP } from "./Projects";
 
 export {
     Home,

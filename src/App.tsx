@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Header from './Components/Header';
-import {Home, Games, Projects, PPP} from './Pages';
+import { Home, Games, Projects, PPP } from './Pages';
 
 function App() {
   return <div className='h-[500px] w-full'>

@@ -1,6 +1,6 @@
-import {Button} from "flowbite-react";
+import { Button } from "flowbite-react";
 import { useState } from "react";
-import {Outlet, Link} from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 
 function Header() {
     let menuItems: string[] = ["home", "games", "projects"];

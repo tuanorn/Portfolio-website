@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Accordion, Button, Card, Tabs, Timeline } from "flowbite-react";
+import { Accordion, Button, Card, Table, Tabs, Timeline } from "flowbite-react";
 import { useState } from "react";
 
 function PPP() {
@@ -27,8 +27,27 @@ function PPP() {
         }],
         "Progress": [{
             "Date": "2024-09-27",
-            "Title": "Brainstorming",
-            "Desc": "5 topics to be amalgamated were presented"
+            "Desc": "Brainstorming of 5 topics"
+        }, {
+            "Date": "2024-10-04",
+            "Desc": "Driving Questions"
+        }],
+        "Driving Questions": [{
+            "First draft of DQs": "How may the shape of a plane affect its flight?",
+            "Critique": "Too broad",
+            "Revised DQs": "How does the wing shape (e.g., airfoil profile, aspect ratio) influence lift and drag in a plane?"
+        }, {
+            "First draft of DQs": "How may origami be used as prototypes?",
+            "Critique": "More engineering-focused than physics-focused",
+            "Revised DQs": "How can origami principles (e.g., folding patterns, structural integrity) be applied to design more efficient or lightweight aircraft components?"
+        }, {
+            "First draft of DQs": "How may an electric thruster be integrated into a plane for flight?",
+            "Critique": "More engineering-focused than physics-focused",
+            "Revised DQs": "What are the physical limitations and challenges of integrating electric thrusters into a conventional aircraft model, and how can these be addressed?"
+        }, {
+            "First draft of DQs": "How may the thrust of an electric thruster be improved while retaining its efficiency?",
+            "Critique": "Strong but too broad",
+            "Revised DQs": "How does the magnetic field strength, current, and thruster geometry affect the thrust and efficiency of an electric thruster?"
         }]
     }
     let menuItems: JSX.Element[] = [];
@@ -39,19 +58,43 @@ function PPP() {
             <p>{item["Text"]}</p>
         </Card>
     })
-    menuItems.push(<Tabs.Item active title="Brainstorming">
-        {brainstormingItems} 
-    </Tabs.Item>)
+    let makeDrivingQList = () => {
+        let headerCells: JSX.Element[] = [];
+        for (let key in pppPgStruct["Driving Questions"][0]) {
+            headerCells.push(<Table.HeadCell className="bg-gray-300">{key}</Table.HeadCell>);
+        }
+        let rows: JSX.Element[] = [];
+        for (let row of pppPgStruct["Driving Questions"]) {
+            let tempArray: JSX.Element[] = [];
+            for (let attr in row) {
+                tempArray.push(<Table.Cell>{row[attr]}</Table.Cell>);
+            }
+            rows.push(<Table.Row className="border-b border-gray-300">{tempArray}</Table.Row>)
+        }
+        return <Table>
+            <Table.Head>
+                {headerCells}
+            </Table.Head>
+            <Table.Body>
+                {rows}
+            </Table.Body>
+        </Table>
+    }
     let timelineItems: JSX.Element[] = pppPgStruct["Progress"].map((item: any) => {
         return <Timeline.Item>
             <Timeline.Point/>
             <Timeline.Content>
                 <Timeline.Time>{item["Date"]}</Timeline.Time>
-                <Timeline.Title>{item["Title"]}</Timeline.Title>
-                <Timeline.Body>{item["Desc"]}</Timeline.Body>
+                <Timeline.Title>{item["Desc"]}</Timeline.Title>
             </Timeline.Content>
         </Timeline.Item>
     });
+    menuItems.push(<Tabs.Item active title="Brainstorming">
+        {brainstormingItems} 
+    </Tabs.Item>)
+    menuItems.push(<Tabs.Item active title="Driving Questions">
+        {makeDrivingQList()} 
+    </Tabs.Item>)
     menuItems.push(<Tabs.Item active title="Progress">
         <p className="text-xl mb-3"><b>Timeline</b></p>
         <Timeline>
@@ -59,7 +102,7 @@ function PPP() {
         </Timeline>
     </Tabs.Item>)
     return <>
-        <Tabs>
+        <Tabs className="gap-1">
             {menuItems}
         </Tabs>
     </>

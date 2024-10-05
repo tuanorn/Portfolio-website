@@ -1,5 +1,6 @@
-import {TextInput, Button} from "flowbite-react";
+import { TextInput, Button } from "flowbite-react";
 import { useState } from "react";
+import { put } from "@vercel/blob";
 
 function Games() {
     let [genresElem, setGenreElem] = useState<JSX.Element[]>([]);
