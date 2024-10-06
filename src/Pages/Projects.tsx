@@ -42,19 +42,19 @@ function PPP(props: any) {
         "Driving Questions": [{
             "First draft of DQs": "How may the shape of a plane affect its flight?",
             "Critique": "Too broad",
-            "Revised DQs": "How does the wing shape (e.g., airfoil profile, aspect ratio) influence lift and drag in a plane?"
+            "A.I. Revised DQs": "How does the wing shape (e.g., airfoil profile, aspect ratio) influence lift and drag in a plane?"
         }, {
             "First draft of DQs": "How may origami be used as prototypes?",
             "Critique": "More engineering-focused than physics-focused",
-            "Revised DQs": "How can origami principles (e.g., folding patterns, structural integrity) be applied to design more efficient or lightweight aircraft components?"
+            "A.I. Revised DQs": "How can origami principles (e.g., folding patterns, structural integrity) be applied to design more efficient or lightweight aircraft components?"
         }, {
             "First draft of DQs": "How may an electric thruster be integrated into a plane for flight?",
             "Critique": "More engineering-focused than physics-focused",
-            "Revised DQs": "What are the physical limitations and challenges of integrating electric thrusters into a conventional aircraft model, and how can these be addressed?"
+            "A.I. Revised DQs": "What are the physical limitations and challenges of integrating electric thrusters into a conventional aircraft model, and how can these be addressed?"
         }, {
             "First draft of DQs": "How may the thrust of an electric thruster be improved while retaining its efficiency?",
             "Critique": "Strong but too broad",
-            "Revised DQs": "How does the magnetic field strength, current, and thruster geometry affect the thrust and efficiency of an electric thruster?"
+            "A.I. Revised DQs": "How does the magnetic field strength, current, and thruster geometry affect the thrust and efficiency of an electric thruster?"
         }]
     }
     let menuItems: JSX.Element[] = [];
@@ -78,14 +78,26 @@ function PPP(props: any) {
             }
             rows.push(<Table.Row className="border-b border-gray-300">{tempArray}</Table.Row>)
         }
-        return <Table>
-            <Table.Head>
-                {headerCells}
-            </Table.Head>
-            <Table.Body>
-                {rows}
-            </Table.Body>
-        </Table>
+        return <>
+            <Table>
+                <Table.Head>
+                    {headerCells}
+                </Table.Head>
+                <Table.Body>
+                    {rows}
+                </Table.Body>
+            </Table>
+            <Card className="mt-3 mx-20">
+                <p><b>Prompt:</b><br/>I have 4 driving questions listed below:</p>
+                <ul>
+                    <li>- How may the shape of a plane affect its flight?</li>
+                    <li>- How may origami be used as prototypes?</li>
+                    <li>- How may an electric thruster be integrated into a plane for flight?</li>
+                    <li>- How may the thrust of an electric thruster be improved while retaining its efficiency?</li>
+                </ul>
+                <p>They are meant for a physics experiment. Provide criticism on their propriety, tell me how they can be improved, and create more appropriate questions.</p>
+            </Card>
+        </>
     }
     let timelineItems: JSX.Element[] = pppPgStruct["Progress"].map((item: any) => {
         return <Timeline.Item>
