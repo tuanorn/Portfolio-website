@@ -19,12 +19,13 @@ function App() {
             <Route path="/projects/PPP" element={<PPP tabIndex="1"/>}/>
             <Route path="/projects/PPP/brainstorming" element={<PPP tabIndex="0"/>}/>
             <Route path="/projects/PPP/DQs" element={<PPP tabIndex="1"/>}/>
-            <Route path="/projects/PPP/progress" element={<PPP tabIndex="2"/>}/>
+            <Route path="/projects/PPP/PPP-slide" element={<PPP tabIndex="2"/>}/>
+            <Route path="/projects/PPP/progress" element={<PPP tabIndex="3"/>}/>
           </Routes>
         </div>
         <div className="col-span-1 w-full bg-gradient-to-r from-black to-gray-500 flex justify-center items-center aspect-[1/4]">
             <div className="bg-white" style={{width: "calc(100% - 30px)", height: "calc(100% - 30px)"}}>
-                [ads]
+                [blank]
             </div>
         </div>
       </div>

@@ -38,6 +38,9 @@ function PPP(props: any) {
         }, {
             "Date": "2024-10-04",
             "Desc": "Driving Questions"
+        }, {
+            "Date": "2024-10-22",
+            "Desc": "PPP Slide"
         }],
         "Driving Questions": [{
             "First draft of DQs": "How may the shape of a plane affect its flight?",
@@ -55,7 +58,10 @@ function PPP(props: any) {
             "First draft of DQs": "How may the thrust of an electric thruster be improved while retaining its efficiency?",
             "Critique": "Strong but too broad",
             "A.I. Revised DQs": "How does the magnetic field strength, current, and thruster geometry affect the thrust and efficiency of an electric thruster?"
-        }]
+        }],
+        "PPP Slide": {
+            "imgName": "Physics_Personal_Project-Poster_Plan.jpg"
+        }
     }
     let menuItems: JSX.Element[] = [];
     let brainstormingItems: JSX.Element[] = pppPgStruct["Brainstorming"].map((item: any) => {
@@ -108,25 +114,22 @@ function PPP(props: any) {
             </Timeline.Content>
         </Timeline.Item>
     });
-    menuItems.push(<Tabs.Item active title="Brainstorming" onFocus={() => {
-            console.log("Focused");
-            navigate("projects/PPP/brainstorming");
-        }}>
+    menuItems.push(<Tabs.Item active title="Brainstorming">
         {brainstormingItems}
-    </Tabs.Item>)
-    menuItems.push(<Tabs.Item active title="Driving Questions" onFocus={() => {
-            navigate("projects/PPP/DQs");
-        }}>
+    </Tabs.Item>);
+    menuItems.push(<Tabs.Item active title="Driving Questions">
         {makeDrivingQList()}
-    </Tabs.Item>)
-    menuItems.push(<Tabs.Item active title="Progress" onFocus={() => {
-            navigate("projects/PPP/progress");
-        }}>
+    </Tabs.Item>);
+    menuItems.push(<Tabs.Item active title="PPP Slide">
+        <img className="w-fit" src={require(`../Images/${pppPgStruct["PPP Slide"]["imgName"]}`)}/>
+    </Tabs.Item>);
+
+    menuItems.push(<Tabs.Item active title="Progress">
         <p className="text-xl mb-3"><b>Timeline</b></p>
         <Timeline>
             {timelineItems}
         </Timeline>
-    </Tabs.Item>)
+    </Tabs.Item>);
     return <>
         <Tabs className="gap-1" ref={tabsRef} onActiveTabChange={(tab) => setActiveTab(tab)}>
             {menuItems}

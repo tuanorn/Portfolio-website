@@ -13,7 +13,7 @@ function Header() {
     });
     return <div className="w-full relative aspect-video" style={{minHeight: "200px"}}>
         <img className="w-full fixed top-0 left-0 -z-10 brightness-50 aspect-video" src={require("../Images/Pong_preview.png")}/>
-        <p className="w-full text-center">[Brand]</p>
+        <p className="w-full text-center">[Title]</p>
         <Button.Group className="absolute bottom-0 right-0">
             {buttonElem}
             <Outlet/>

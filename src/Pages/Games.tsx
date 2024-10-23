@@ -1,6 +1,7 @@
 import { TextInput, Button } from "flowbite-react";
 import { useState } from "react";
 import { put } from "@vercel/blob";
+import Error404 from "./Error404";
 
 function Games() {
     let [genresElem, setGenreElem] = useState<JSX.Element[]>([]);
@@ -20,6 +21,7 @@ function Games() {
         <div className="games-section col-span-2">
             [games menu]
         </div>
+        <Error404/>
     </div>
 }
 export default Games;
