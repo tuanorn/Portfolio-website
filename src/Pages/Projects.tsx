@@ -1,6 +1,8 @@
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { Accordion, Button, Card, Table, Tabs, TabsRef, Timeline } from "flowbite-react";
 import { useEffect, useRef, useState } from "react";
+import { text } from "stream/consumers";
+
 
 function PPP(props: any) {
     const navigate = useNavigate();
@@ -61,6 +63,9 @@ function PPP(props: any) {
         }],
         "PPP Slide": {
             "imgName": "Physics_Personal_Project-Poster_Plan.jpg"
+        },
+        "Reflection": {
+            "Title": "Reflection on Peer Feedback"
         }
     }
     let menuItems: JSX.Element[] = [];
@@ -123,13 +128,22 @@ function PPP(props: any) {
     menuItems.push(<Tabs.Item active title="PPP Slide">
         <img className="w-fit" src={require(`../Images/${pppPgStruct["PPP Slide"]["imgName"]}`)}/>
     </Tabs.Item>);
-
     menuItems.push(<Tabs.Item active title="Progress">
         <p className="text-xl mb-3"><b>Timeline</b></p>
         <Timeline>
             {timelineItems}
         </Timeline>
     </Tabs.Item>);
+
+    let reflection_content = "I had planned to test each of the 5 wings at different angles, recording their lift and drag coefficients and the Reynold’s number. However, the suggestion to limit the number of factors gave me a revelation to how I can make my research more thorough. Hence, I decided to study only, and extensively, about the Concorde’s wing and limiting the independent variable to only the angle of attack. With this, I can reduce the complexity of my project and provide a more presentable product.";
+    // fetch("src/Text_files/Reflection_on_peer_feedback.txt").then((res) => res.text())
+    //     .then((text) => {reflection_content = text; console.log(text)});
+    menuItems.push(<Tabs.Item active title="Reflection">
+        <p className="text-xl mb-3"><b>{pppPgStruct["Reflection"]["Title"]}</b></p>
+        <p>{reflection_content}</p>
+    </Tabs.Item>);
+
+
     return <>
         <Tabs className="gap-1" ref={tabsRef} onActiveTabChange={(tab) => setActiveTab(tab)}>
             {menuItems}
