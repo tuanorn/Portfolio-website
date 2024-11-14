@@ -65,7 +65,12 @@ function PPP(props: any) {
             "imgName": "Physics_Personal_Project-Poster_Plan.jpg"
         },
         "Reflection": {
-            "Title": "Reflection on Peer Feedback"
+            "Title": "Reflection on Peer Feedback",
+            "Content": "I had planned to test each of the 5 wings at different angles, recording their lift and drag coefficients and the Reynold’s number. However, the suggestion to limit the number of factors gave me a revelation to how I can make my research more thorough. Hence, I decided to study only, and extensively, about the Concorde’s wing and limiting the independent variable to only the angle of attack. With this, I can reduce the complexity of my project and provide a more presentable product."
+        },
+        "Plan of Action": {
+            "Gantt Chart": "PPP_gantt_chart.png",
+            "Plan of Action": "Within this week, a 3D model of the Concorde's wing will be produced, and research on analyzing CFD results will be completed. Next week will be dedicated to collecting Reynold's numbers and lift-to-drag ratios at different angles of attack; a 3D model must be produced or found before then. The physical model of the wing should be built right after the CFD data collection, giving a week and a half to gather materials and tools. Within the last week of November, a script will be prepared as a research paper with its implications researched."
         }
     }
     let menuItems: JSX.Element[] = [];
@@ -135,12 +140,17 @@ function PPP(props: any) {
         </Timeline>
     </Tabs.Item>);
 
-    let reflection_content = "I had planned to test each of the 5 wings at different angles, recording their lift and drag coefficients and the Reynold’s number. However, the suggestion to limit the number of factors gave me a revelation to how I can make my research more thorough. Hence, I decided to study only, and extensively, about the Concorde’s wing and limiting the independent variable to only the angle of attack. With this, I can reduce the complexity of my project and provide a more presentable product.";
     // fetch("src/Text_files/Reflection_on_peer_feedback.txt").then((res) => res.text())
     //     .then((text) => {reflection_content = text; console.log(text)});
     menuItems.push(<Tabs.Item active title="Reflection">
         <p className="text-xl mb-3"><b>{pppPgStruct["Reflection"]["Title"]}</b></p>
-        <p>{reflection_content}</p>
+        <p>{pppPgStruct["Reflection"]["Content"]}</p>
+    </Tabs.Item>);
+    menuItems.push(<Tabs.Item active title="Plan of Action">
+        <p className="text-xl mb-3"><b>Gantt Chart:</b></p>
+        <img src={require(`../Images/${pppPgStruct["Plan of Action"]["Gantt Chart"]}`)}/>
+        <p className="text-xl mb-3"><b>Plan of Action:</b></p>
+        <p>{pppPgStruct["Plan of Action"]["Plan of Action"]}</p>
     </Tabs.Item>);
 
 
