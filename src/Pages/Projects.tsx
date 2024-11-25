@@ -71,6 +71,9 @@ function PPP(props: any) {
         "Plan of Action": {
             "Gantt Chart": "PPP_gantt_chart.png",
             "Plan of Action": "Within this week, a 3D model of the Concorde's wing will be produced, and research on analyzing CFD results will be completed. Next week will be dedicated to collecting Reynold's numbers and lift-to-drag ratios at different angles of attack; a 3D model must be produced or found before then. The physical model of the wing should be built right after the CFD data collection, giving a week and a half to gather materials and tools. Within the last week of November, a script will be prepared as a research paper with its implications researched."
+        },
+        "Secondary Research Mind Map": {
+            "mindMapImg": "The_Physics_of_Wings-Mindmap-PPP.jpg"
         }
     }
     let menuItems: JSX.Element[] = [];
@@ -152,6 +155,10 @@ function PPP(props: any) {
         <p className="text-xl mb-3"><b>Plan of Action:</b></p>
         <p>{pppPgStruct["Plan of Action"]["Plan of Action"]}</p>
     </Tabs.Item>);
+    menuItems.push(<Tabs.Item active title="Secondary Research Mind Map">
+        <img src={require(`../Images/${pppPgStruct["Secondary Research Mind Map"]["mindMapImg"]}`)}/>
+    </Tabs.Item>);
+
 
 
     return <>

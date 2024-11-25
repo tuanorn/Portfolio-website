@@ -23,6 +23,7 @@ function App() {
             <Route path="/projects/PPP/progress" element={<PPP tabIndex="3"/>}/>
             <Route path="/projects/PPP/reflection" element={<PPP tabIndex="4"/>}/>
             <Route path="/projects/PPP/plan_of_action" element={<PPP tabIndex="5"/>}/>
+            <Route path="/projects/PPP/mind_map" element={<PPP tabIndex="6"/>}/>
           </Routes>
         </div>
         <div className="col-span-1 w-full bg-gradient-to-r from-black to-gray-500 flex justify-center items-center aspect-[1/4]">
