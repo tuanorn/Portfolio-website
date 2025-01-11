@@ -1,6 +1,5 @@
 import { TextInput, Button } from "flowbite-react";
-import { useState } from "react";
-import { put } from "@vercel/blob";
+import { JSX, useState } from "react";
 import Error404 from "./Error404";
 
 function Games() {

@@ -1,6 +1,6 @@
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { Accordion, Button, Card, List, Table, Tabs, TabsRef, Timeline } from "flowbite-react";
-import { useEffect, useRef, useState } from "react";
+import { JSX, useEffect, useRef, useState } from "react";
 import { text } from "stream/consumers";
 
 
