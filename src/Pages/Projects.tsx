@@ -210,6 +210,10 @@ function PPP(props: any) {
             With the coefficients as constants at a given angle of attack, the required speeds can be derived for environments of different fluid densities.
             In addition, 2D simulations prove handy in their simplicity and expandable nature (such as through using multiple different airfoils and integrating the individual 2D CFD results).
             Hence, the experiment's results may contribute to future research.</p>
+        <p className="text-lg mt-6">Reflection</p>
+        <p>Throughout the project, I encountered several hurdles, such as not knowing how to operate OpenFOAM, struggling to understand an aerodynamic concept, and finding myself oblivious in my plans.
+            I hence endeavored to seek alternatives, or at least facilitators, for the process. Owing to the attempt, I was able to discover BaramCFD, understand the fundamentals of aerodynamics (by reading a chapter of a textbook),
+            and readjust my plan to match my capabilities (by presenting results on the NACA 4415 airfoil instead of the Concorde's wing).</p>
     </Tabs.Item>)
     menuItems.push(<Tabs.Item className="grid" active title="Final Product">
         <p>Wind tunnel comprises:</p>
