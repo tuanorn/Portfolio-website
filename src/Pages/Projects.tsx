@@ -78,6 +78,7 @@ function PPP(props: any) {
         },
         "Primary Research": {
             "spreadsheetLink": "https://1drv.ms/x/c/b5933cfa18aa2826/EVwOPDXPHZdDh7R5CvxrlT4Bb_1z1wJ_Nz-AefWJkHK-6g",
+            "CFD_screenshots": "NACA_4415_CFD_Screenshots.png",
             "table": "NACA_4415_CFD_Results_Summary.png",
             "mesh_img": "Mesh.png",
             "CFD_inputs_img": "CFD_inputs.png",
@@ -184,16 +185,20 @@ function PPP(props: any) {
         <p className="text-lg mt-6">Methodology:</p>
         <List className="text-black">
             <List.Item>
-                Created a 2D mesh that is punctured with the shape of the NACA 4415 and uses a semi-circle inlet, to change the angle of attack without changing the mesh
+                Created a 2D mesh that is punctured with the shape of the NACA 4415 and uses a semi-circle inlet, to change the angle of attack without changing the mesh.
+                The mesh has approximately 7,500,000 cells with a 1-cell depth for OpenFOAM to consider it a 2D mesh.
                 <img className="w-1/2 justify-self-center" src={require(`../Images/${pppPgStruct["Primary Research"]["mesh_img"]}`)}></img>
             </List.Item>
             <List.Item>
                 BaramFlow - a GUI for OpenFOAM - was used for the simulation, with the following inputs:
                 <img className="w-1/2 justify-self-center" src={require(`../Images/${pppPgStruct["Primary Research"]["CFD_inputs_img"]}`)}></img>
             </List.Item>
+            <List.Item>An experiment was not conducted for a physical wind tunnel due to inadequate budget and equipment.
+                Factors such as pressure and temperature were uncontrollable, disallowing the application of dynamically similar flows.</List.Item>
         </List>
         <p className="text-lg mt-6">Results:</p>
         <a className="text-blue-400 underline" href="https://1drv.ms/x/c/b5933cfa18aa2826/EVwOPDXPHZdDh7R5CvxrlT4Bb_1z1wJ_Nz-AefWJkHK-6g">Link to data</a>
+        <img className="w-3/4 justify-self-center mb-3" src={require(`../Images/${pppPgStruct["Primary Research"]["CFD_screenshots"]}`)}/>
         <img src={require(`../Images/${pppPgStruct["Primary Research"]["table"]}`)}/>
         <div className="flex my-3">
             <img className="w-1/3" src={require(`../Images/${pppPgStruct["Primary Research"]["drag_coeff_img"]}`)}/>
@@ -224,7 +229,7 @@ function PPP(props: any) {
         <img className="w-1/2 justify-self-center mb-6" src={require(`../Images/${pppPgStruct["Final Product"]["img1"]}`)}/>
         <p>Airfoil and pivot:</p>
         <img className="w-1/2 justify-self-center mb-6" src={require(`../Images/${pppPgStruct["Final Product"]["img2"]}`)}/>
-        <p>Trifold:</p>
+        <p>Trifold:<br/><a className="text-blue-400 underline text-base" href="https://www.canva.com/design/DAGbaPDQfHY/3UPLxoKeT4-hmLst3mIxUw/view?utm_content=DAGbaPDQfHY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h2bf0324f6f">Link to Canva</a></p>
         <img className="w-1/2 justify-self-center mb-6" src={require(`../Images/${pppPgStruct["Final Product"]["img3"]}`)}/>
     </Tabs.Item>)
 
