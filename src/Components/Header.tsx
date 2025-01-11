@@ -1,5 +1,5 @@
 import { Button } from "flowbite-react";
-import { useState } from "react";
+import { JSX, useState } from "react";
 import { Outlet, Link } from "react-router-dom";
 
 function Header(props: any) {
