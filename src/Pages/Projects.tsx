@@ -1,5 +1,5 @@
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
-import { Accordion, Button, Card, Table, Tabs, TabsRef, Timeline } from "flowbite-react";
+import { Accordion, Button, Card, List, Table, Tabs, TabsRef, Timeline } from "flowbite-react";
 import { useEffect, useRef, useState } from "react";
 import { text } from "stream/consumers";
 
@@ -62,7 +62,8 @@ function PPP(props: any) {
             "A.I. Revised DQs": "How does the magnetic field strength, current, and thruster geometry affect the thrust and efficiency of an electric thruster?"
         }],
         "PPP Slide": {
-            "imgName": "Physics_Personal_Project-Poster_Plan.jpg"
+            "img1": "Physics_Personal_Project-Poster_Plan.jpg",
+            "img2": "Physics_Personal_Project-Poster_Plan-updated.jpg"
         },
         "Reflection": {
             "Title": "Reflection on Peer Feedback",
@@ -74,6 +75,20 @@ function PPP(props: any) {
         },
         "Secondary Research Mind Map": {
             "mindMapImg": "The_Physics_of_Wings-Mindmap-PPP.jpg"
+        },
+        "Primary Research": {
+            "spreadsheetLink": "https://1drv.ms/x/c/b5933cfa18aa2826/EVwOPDXPHZdDh7R5CvxrlT4Bb_1z1wJ_Nz-AefWJkHK-6g",
+            "table": "NACA_4415_CFD_Results_Summary.png",
+            "mesh_img": "Mesh.png",
+            "CFD_inputs_img": "CFD_inputs.png",
+            "drag_coeff_img": "Drag_coeff_graph.png",
+            "lift_coeff_img": "Lift_coeff_graph.png",
+            "moment_coeff_img": "Moment_coeff_graph.png"
+        },
+        "Final Product": {
+            "img1": "Wind Tunnel - PPP - SPH4U0.jpg",
+            "img2": "Airfoil - PPP - SPH4U0.jpg",
+            "img3": "Trifold - PPP - SPH4U0.jpg"
         }
     }
     let menuItems: JSX.Element[] = [];
@@ -118,15 +133,16 @@ function PPP(props: any) {
             </Card>
         </>
     }
-    let timelineItems: JSX.Element[] = pppPgStruct["Progress"].map((item: any) => {
-        return <Timeline.Item>
-            <Timeline.Point/>
-            <Timeline.Content>
-                <Timeline.Time>{item["Date"]}</Timeline.Time>
-                <Timeline.Title>{item["Desc"]}</Timeline.Title>
-            </Timeline.Content>
-        </Timeline.Item>
-    });
+    // let timelineItems: JSX.Element[] = pppPgStruct["Progress"].map((item: any) => {
+    //     return <Timeline.Item>
+    //         <Timeline.Point/>
+    //         <Timeline.Content>
+    //             <Timeline.Time>{item["Date"]}</Timeline.Time>
+    //             <Timeline.Title>{item["Desc"]}</Timeline.Title>
+    //         </Timeline.Content>
+    //     </Timeline.Item>
+    // });
+    
     menuItems.push(<Tabs.Item active title="Brainstorming">
         {brainstormingItems}
     </Tabs.Item>);
@@ -134,14 +150,16 @@ function PPP(props: any) {
         {makeDrivingQList()}
     </Tabs.Item>);
     menuItems.push(<Tabs.Item active title="PPP Slide">
-        <img className="w-fit" src={require(`../Images/${pppPgStruct["PPP Slide"]["imgName"]}`)}/>
+        <img className="w-fit" src={require(`../Images/${pppPgStruct["PPP Slide"]["img2"]}`)}/>
+        <p><br/><br/>Old version:</p>
+        <img className="w-fit" src={require(`../Images/${pppPgStruct["PPP Slide"]["img1"]}`)}/>
     </Tabs.Item>);
-    menuItems.push(<Tabs.Item active title="Progress">
-        <p className="text-xl mb-3"><b>Timeline</b></p>
-        <Timeline>
-            {timelineItems}
-        </Timeline>
-    </Tabs.Item>);
+    // menuItems.push(<Tabs.Item active title="Progress">
+    //     <p className="text-xl mb-3"><b>Timeline</b></p>
+    //     <Timeline>
+    //         {timelineItems}
+    //     </Timeline>
+    // </Tabs.Item>);
 
     // fetch("src/Text_files/Reflection_on_peer_feedback.txt").then((res) => res.text())
     //     .then((text) => {reflection_content = text; console.log(text)});
@@ -158,11 +176,57 @@ function PPP(props: any) {
     menuItems.push(<Tabs.Item active title="Secondary Research Mind Map">
         <img src={require(`../Images/${pppPgStruct["Secondary Research Mind Map"]["mindMapImg"]}`)}/>
     </Tabs.Item>);
-
+    menuItems.push(<Tabs.Item active title="Primary Research">
+        <p className="text-lg w-full mt-6">Question:</p>
+        <p className="text-center w-full">How does angle of attack affect the lift and drag coefficients?</p>
+        <p className="text-lg mt-6">Hypothesis:</p>
+        <p className="text-center w-full">The coefficients of drag and lift would increase as the angle of attack increases.</p>
+        <p className="text-lg mt-6">Methodology:</p>
+        <List className="text-black">
+            <List.Item>
+                Created a 2D mesh that is punctured with the shape of the NACA 4415 and uses a semi-circle inlet, to change the angle of attack without changing the mesh
+                <img className="w-1/2 justify-self-center" src={require(`../Images/${pppPgStruct["Primary Research"]["mesh_img"]}`)}></img>
+            </List.Item>
+            <List.Item>
+                BaramFlow - a GUI for OpenFOAM - was used for the simulation, with the following inputs:
+                <img className="w-1/2 justify-self-center" src={require(`../Images/${pppPgStruct["Primary Research"]["CFD_inputs_img"]}`)}></img>
+            </List.Item>
+        </List>
+        <p className="text-lg mt-6">Results:</p>
+        <a className="text-blue-400 underline" href="https://1drv.ms/x/c/b5933cfa18aa2826/EVwOPDXPHZdDh7R5CvxrlT4Bb_1z1wJ_Nz-AefWJkHK-6g">Link to data</a>
+        <img src={require(`../Images/${pppPgStruct["Primary Research"]["table"]}`)}/>
+        <div className="flex my-3">
+            <img className="w-1/3" src={require(`../Images/${pppPgStruct["Primary Research"]["drag_coeff_img"]}`)}/>
+            <img className="w-1/3" src={require(`../Images/${pppPgStruct["Primary Research"]["lift_coeff_img"]}`)}/>
+            <img className="w-1/3" src={require(`../Images/${pppPgStruct["Primary Research"]["moment_coeff_img"]}`)}/>
+        </div>
+        <p>The results conforms to the hypothesis. As the angle of attack increases, the curvature of the airfoil increases relative to the flow;
+            this would increase the speed on top of the airfoil, creating a higher pressure difference (according to the Benoulli's principle) and hence generate more lift.
+            Since dynamic pressure and the planform area do not change, the coefficient of lift increases. With the amplified effects of the normal and axial forces,
+            drag also increases, giving a higher coefficient of drag.<br/>
+            Although the simulation did not converge, the fluctuations of lift and drag forces were below 0.5, satiable for the experiment's purpose.</p>
+        <p className="text-lg mt-6">Conclusion</p>
+        <p>This experiment formed the basis for calculating the performance of the NACA 4415 in different situations.
+            With the coefficients as constants at a given angle of attack, the required speeds can be derived for environments of different fluid densities.
+            In addition, 2D simulations prove handy in their simplicity and expandable nature (such as through using multiple different airfoils and integrating the individual 2D CFD results).
+            Hence, the experiment's results may contribute to future research.</p>
+    </Tabs.Item>)
+    menuItems.push(<Tabs.Item className="grid" active title="Final Product">
+        <p>Wind tunnel comprises:</p>
+        <List className="text-black">
+            <List.Item>A fan with a variable speed controller</List.Item>
+            <List.Item>A flow straightener</List.Item>
+        </List>
+        <img className="w-1/2 justify-self-center mb-6" src={require(`../Images/${pppPgStruct["Final Product"]["img1"]}`)}/>
+        <p>Airfoil and pivot:</p>
+        <img className="w-1/2 justify-self-center mb-6" src={require(`../Images/${pppPgStruct["Final Product"]["img2"]}`)}/>
+        <p>Trifold:</p>
+        <img className="w-1/2 justify-self-center mb-6" src={require(`../Images/${pppPgStruct["Final Product"]["img3"]}`)}/>
+    </Tabs.Item>)
 
 
     return <>
-        <Tabs className="gap-1" ref={tabsRef} onActiveTabChange={(tab) => setActiveTab(tab)}>
+        <Tabs className="gap-1" aria-label="Full width tabs" ref={tabsRef} onActiveTabChange={(tab) => setActiveTab(tab)}>
             {menuItems}
         </Tabs>
     </>
@@ -189,7 +253,7 @@ function Projects() {
         </Accordion.Panel>);
     }
     return <>
-        <Accordion>
+        <Accordion >
             {projectElem}
         </Accordion>
     </>
