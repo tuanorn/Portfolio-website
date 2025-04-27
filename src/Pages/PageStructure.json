@@ -109,5 +109,11 @@
     "MDM4U_Sum_Proj": {
         "Report": "",
         "Supporting App": ""
-    }
+    },
+    "Games": [{
+        "Name": "Ludus Fortunae",
+        "HTML_link": "/Web_apps/Ludus_Fortunae-utility_app/index.html",
+        "Thumbnail": "/Web_apps/Ludus_Fortunae-utility_app/Ludus Fortunae - Thumbnail.jpg",
+        "Tags": "Strategy"
+    }]
 }

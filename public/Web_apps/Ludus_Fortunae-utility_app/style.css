@@ -7,8 +7,6 @@ body {
   text-align: center;
   background-color: white;
   font-family: Helvetica, Verdana, Arial, sans-serif;
-
-  aspect-ratio: 128/96;
 }
 
 body, canvas, div {
