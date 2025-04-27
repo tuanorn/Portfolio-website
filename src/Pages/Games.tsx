@@ -17,10 +17,10 @@ function Games() {
                 {genresElem}
             </div>
         </div>
-        <div className="games-section col-span-2">
-            [games menu]
+        <div className="games-section col-span-3">
+            <iframe title="Game" src="/Web_apps/Ludus_Fortunae-utility_app/index.html" className="w-full aspect-square"/>
+            
         </div>
-        <Error404/>
     </div>
 }
 export default Games;

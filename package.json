@@ -9,6 +9,7 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vercel/blob": "^0.24.1",
+    "file-loader": "^6.2.0",
     "flowbite-react": "^0.10.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

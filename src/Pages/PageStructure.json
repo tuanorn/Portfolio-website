@@ -1,0 +1,113 @@
+{
+    "Projects": {
+        "Academic Projects": [{
+            "Name": "Personal Physics Project (PPP)",
+            "Link": "/projects/PPP"
+        }, {
+            "Name": "Genius Hour Project (GHP)",
+            "Link": "/projects/GHP"
+        }],
+        "Community Projects": []
+    },
+    "PPP": {
+        "Brainstorming": [{
+            "Title": "Airplanes",
+            "ImgSrc": "Bell_X-1.jpg",
+            "Text": "Before entering grade one, I was already fiddling with the paper airplanes my grandfather taught me to fold. It is this course of mindless exploration that stemmed my intellectual curiosity about how a plane can be optimized."
+        }, {
+            "Title": "Electric Propulsion",
+            "ImgSrc": "Electric_propulsion.jpg",
+            "Text": "Moving towards the modern age, computer hardware evolves to have no moving parts. Hence, I sought similar progress in aeronautics and found electric propulsions. In 2018, MIT launched its first electro-aerodynamics airplane, which I aspire to replicate and improve, given the now massively available info on the topic."
+        }, {
+            "Title": "Energy Efficiency",
+            "ImgSrc": "Leaf_in_bulb.png",
+            "Text": "With global warming swirling its hurricanes around the world, I aspire to advance or at least encourage the movement toward using green energy."
+        }, {
+            "Title": "Programming",
+            "ImgSrc": "Programming.jpg",
+            "Text": "Offered a world of unlimited possibility, a 10-year-old child cannot help but delve into it and realize his imagination. I was given such opportunities and have maintained the endeavors to create a commercial game of my own ever since. Now, I also seek to diversify my skills into lower levels of programming."
+        }, {
+            "Title": "Printed Circuit Boards",
+            "ImgSrc": "PCB.jpg",
+            "Text": "It is fascinating how a piece of silicon can exert so much wonder, from simple robots to full-blown ultra graphics. Thus, I am intrigued by exploring such a powerful device."
+        }],
+        "Progress": [{
+            "Date": "2024-09-27",
+            "Desc": "Brainstorming of 5 topics"
+        }, {
+            "Date": "2024-10-04",
+            "Desc": "Driving Questions"
+        }, {
+            "Date": "2024-10-22",
+            "Desc": "PPP Slide"
+        }],
+        "Driving Questions": [{
+            "First draft of DQs": "How may the shape of a plane affect its flight?",
+            "Critique": "Too broad",
+            "A.I. Revised DQs": "How does the wing shape (e.g., airfoil profile, aspect ratio) influence lift and drag in a plane?"
+        }, {
+            "First draft of DQs": "How may origami be used as prototypes?",
+            "Critique": "More engineering-focused than physics-focused",
+            "A.I. Revised DQs": "How can origami principles (e.g., folding patterns, structural integrity) be applied to design more efficient or lightweight aircraft components?"
+        }, {
+            "First draft of DQs": "How may an electric thruster be integrated into a plane for flight?",
+            "Critique": "More engineering-focused than physics-focused",
+            "A.I. Revised DQs": "What are the physical limitations and challenges of integrating electric thrusters into a conventional aircraft model, and how can these be addressed?"
+        }, {
+            "First draft of DQs": "How may the thrust of an electric thruster be improved while retaining its efficiency?",
+            "Critique": "Strong but too broad",
+            "A.I. Revised DQs": "How does the magnetic field strength, current, and thruster geometry affect the thrust and efficiency of an electric thruster?"
+        }],
+        "PPP Slide": {
+            "img1": "Physics_Personal_Project-Poster_Plan.jpg",
+            "img2": "Physics_Personal_Project-Poster_Plan-updated.jpg"
+        },
+        "Reflection": {
+            "Title": "Reflection on Peer Feedback",
+            "Content": "I had planned to test each of the 5 wings at different angles, recording their lift and drag coefficients and the Reynold’s number. However, the suggestion to limit the number of factors gave me a revelation to how I can make my research more thorough. Hence, I decided to study only, and extensively, about the Concorde’s wing and limiting the independent variable to only the angle of attack. With this, I can reduce the complexity of my project and provide a more presentable product."
+        },
+        "Plan of Action": {
+            "Gantt Chart": "PPP_gantt_chart.png",
+            "Plan of Action": "Within this week, a 3D model of the Concorde's wing will be produced, and research on analyzing CFD results will be completed. Next week will be dedicated to collecting Reynold's numbers and lift-to-drag ratios at different angles of attack; a 3D model must be produced or found before then. The physical model of the wing should be built right after the CFD data collection, giving a week and a half to gather materials and tools. Within the last week of November, a script will be prepared as a research paper with its implications researched."
+        },
+        "Secondary Research Mind Map": {
+            "mindMapImg": "The_Physics_of_Wings-Mindmap-PPP.jpg"
+        },
+        "Primary Research": {
+            "spreadsheetLink": "https://1drv.ms/x/c/b5933cfa18aa2826/EVwOPDXPHZdDh7R5CvxrlT4Bb_1z1wJ_Nz-AefWJkHK-6g",
+            "CFD_screenshots": "NACA_4415_CFD_Screenshots.png",
+            "table": "NACA_4415_CFD_Results_Summary.png",
+            "mesh_img": "Mesh.png",
+            "CFD_inputs_img": "CFD_inputs.png",
+            "drag_coeff_img": "Drag_coeff_graph.png",
+            "lift_coeff_img": "Lift_coeff_graph.png",
+            "moment_coeff_img": "Moment_coeff_graph.png"
+        },
+        "Final Product": {
+            "img1": "Wind Tunnel - PPP - SPH4U0.jpg",
+            "img2": "Airfoil - PPP - SPH4U0.jpg",
+            "img3": "Trifold - PPP - SPH4U0.jpg"
+        }
+    },
+    "GHP": {
+        "Driving Questions": {
+            "Topic 1": "Flow Battery",
+            "DQ 1": "How do the chemical properties of electrolytes impact the efficiency of a flow battery?",
+            "Units covered[0]": "Organic chemistry, chemical systems & equilibrium, and electrochemistry",
+            "Topic 2": "Active Origami",
+            "DQ 2": "How do the electrochemical properties of polypyrrole influence its actuation (power and efficiency measurement) in active origami?",
+            "Units covered[1]": "Organic chemistry, atomic structure & properties, and electrochemistry"
+        },
+        "Chosen Topic": {
+            "Topic": "Active Origami",
+            "Doc_link": "https://1drv.ms/w/c/b5933cfa18aa2826/IQTDR37YIxp0QZTQIxwArtDIASGE9l2Bl1o81G0KFEGMxxw?em=2"
+        },
+        "Presentation": {
+
+        }
+    },
+    "MDM4U_Sum_Proj": {
+        "Report": "",
+        "Supporting App": ""
+    }
+}

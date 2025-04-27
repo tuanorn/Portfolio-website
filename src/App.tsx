@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 import Header from './Components/Header';
 import { Home, Games, Projects, PPP } from './Pages';
+import { GHP } from './Pages/Projects';
 
 function App() {
   let [title, setTitle] = useState("Portfolio Website");
@@ -12,8 +13,11 @@ function App() {
   const location = useLocation();
   useEffect(() => {
     if (location.pathname.includes("PPP")) {
-      setTitle("Personal Physics Project");
-      setBgImg("Concorde_wing_CFD_20deg_frame_300.png");
+      setTitle("PPP");
+      setBgImg("/PPP_SPH4U/Concorde_wing_CFD_20deg_frame_300.png");
+    } else if (location.pathname.includes("GHP")) {
+      setTitle("GHP");
+      setBgImg("Pong_preview.png");
     } else {
       setTitle("Porfolio Website");
       setBgImg("Pong_preview.png");
@@ -29,6 +33,7 @@ function App() {
             <Route path="/" element={<Home/>}/>
             <Route path="/games" element={<Games/>}/>
             <Route path="/projects" element={<Projects/>}/>
+
             <Route path="/projects/PPP" element={<PPP tabIndex="0"/>}/>
             <Route path="/projects/PPP/brainstorming" element={<PPP tabIndex="0"/>}/>
             <Route path="/projects/PPP/DQs" element={<PPP tabIndex="1"/>}/>
@@ -39,6 +44,8 @@ function App() {
             <Route path="/projects/PPP/mind_map" element={<PPP tabIndex="5"/>}/>
             <Route path="/projects/PPP/primary_research" element={<PPP tabIndex="6"/>}/>
             <Route path="/projects/PPP/final_product" element={<PPP tabIndex="7"/>}/>
+
+            <Route path="/projects/GHP" element={<GHP tabIndex="0"/>}/>
           </Routes>
         </div>
         <div className="col-span-1 w-full bg-gradient-to-r from-black to-gray-500 flex justify-center items-center aspect-[1/4]">
