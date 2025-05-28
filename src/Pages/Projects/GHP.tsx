@@ -28,10 +28,33 @@ function GHP(props: any) {
                 break;
             case 1:
                 tabContent = <div className="w-full">
-                        <p className="text-lg"><b>Topic:</b> Active Origami</p>
+                        <p className="text-lg"><b>Topic:</b> {ghpPgStruct[tab]["Topic"]}</p>
                         <p>Research doc:</p>
                         <iframe className="w-full px-3 min-h-[500px]" src={ghpPgStruct[tab]["Doc_link"]}/>
                     </div>
+                break;
+            case 2:
+                let temp2: JSX.Element[] = [];
+                for (let categs in ghpPgStruct[tab]) {
+                    let imgs: JSX.Element[] = [];
+                    if (Array.isArray(ghpPgStruct[tab][categs])) {
+                        for (let imgSrc of ghpPgStruct[tab][categs]) {
+                            imgs.push(<div className="w-1/4 mx-2 inline-block">
+                                <img className="h-[200px] mx-auto" src={`/Images/GHP_SCH4U/${imgSrc}`}/>
+                                <p>{(imgSrc as string).slice(0, -15)}</p>
+                            </div>)
+                        }
+                    }
+                    temp2.push(<div className="w-full">
+                        <p className="text-lg">{categs}:</p>
+                        {(imgs.length > 0)? <div className="text-center">{imgs}</div>
+                        : <div className="mx-auto w-1/2">
+                            <img className="w-full" src={`/Images/GHP_SCH4U/${ghpPgStruct[tab][categs]}`}/>
+                            <p className="w-full text-center">From left to right: Sponge, circuit, and bimetallic strip</p>
+                        </div>}                        
+                    </div>)
+                }
+                tabContent = <div className="w-full">{temp2}</div>
         }
         tabs.push(<Tabs.Item title={tab}>
                 {tabContent}

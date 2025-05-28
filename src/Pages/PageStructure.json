@@ -99,11 +99,13 @@
             "Units covered[1]": "Organic chemistry, atomic structure & properties, and electrochemistry"
         },
         "Chosen Topic": {
-            "Topic": "Active Origami",
+            "Topic": "Synthesis and Applications of Polypyrrole as An Active Material",
             "Doc_link": "https://1drv.ms/w/c/b5933cfa18aa2826/IQTDR37YIxp0QZTQIxwArtDIASGE9l2Bl1o81G0KFEGMxxw?em=2"
         },
-        "Presentation": {
-
+        "Preparation": {
+            "Materials": "SCH4U_Summ_Proj_Materials.jpg",
+            "3D Structures": ["Pyrrole-screenshot.jpg", "Pyrrole_cation-screenshot.jpg", "Pyrrole_dimer-screenshot.jpg"],
+            "3D Structures with Van der Waals Forces": ["Pyrrole_with_VdW-screenshot.jpg", "Pyrrole_cation_with_VdW-screenshot.jpg", "Pyrrole_dimer_with_VdW-screenshot.jpg"]
         }
     },
     "MDM4U_Sum_Proj": {
