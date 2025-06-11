@@ -98,14 +98,27 @@
             "DQ 2": "How do the electrochemical properties of polypyrrole influence its actuation (power and efficiency measurement) in active origami?",
             "Units covered[1]": "Organic chemistry, atomic structure & properties, and electrochemistry"
         },
-        "Chosen Topic": {
-            "Topic": "Synthesis and Applications of Polypyrrole as An Active Material",
-            "Doc_link": "https://1drv.ms/w/c/b5933cfa18aa2826/IQTDR37YIxp0QZTQIxwArtDIASGE9l2Bl1o81G0KFEGMxxw?em=2"
+        "Post 1": {
+            "Title": "Choosing the Driving Question",
+            "Content": "Given my interests in origami and sustainability, the 2 topics considered are active origami and flow battery.\nA flow battery is a rechargeable battery that separates energy storage and conversion. It uses redox reactions, including plating and deplating, to both release electrons (discharge) and gain electrons (recharge). Common substances used are vanadium and zinc, which are often available in a high school environment. Considering its easy and affordable setup and simple reactions, it should be a suitable subject for presentation.\nActive origami involves designing structures that fold and unfold using stimuli from a non-mechanical field. It largely requires polymer due to its efficiency and precision in terms of actuation and versatility in terms of chemical properties (such as conductivity). After some research, it was initially thought that an affordable and simple demonstration was possible.\nI was more inclined to choose the latter, even though it has some uncertainties. Hence, although the former is more practical, the latter was selected as it commands more intellectual curiosity."
         },
-        "Preparation": {
+        "Post 2": {
+            "Title": "Choosing the Polymer and Researching",
+            "Content": "Different polymers, from hydrogels to polyurethanes, were considered for the final product, and one that was most cost-efficient and viable was polypyrrole (PPy).\nMultiple concepts stemmed from the research process, including conducting polymer, doping, polarons, Faraday’s constant, and cyclic voltammetry, among others. Although the complexity scaled up, the research progress still aligns with the schedule. Yet, what struck a surprise was that PPy is an electroactive polymer rather than a shape memory polymer. Hence, the polymer itself cannot bend, but relies on principles similar to a bimetallic strip.\nGiven the scarce information on its actuation, due to the nature of the polymer, it was not known at first that expensive equipment, such as the potentiostat, is needed to create a desirable demonstration, in which PPy coats a carbon film to exhibit bending."
+        },
+        "Post 3": {
+            "Title": "Seeking Alternatives, Acquiring Materials, and Planning a Presentation",
+            "Content": "After more research was done regarding the mechanisms of different reactions, alternatives for the demonstration were devised, given the unavailability of equipment. They involve converting chemical reactions into abstract physical processes (doping to water absorption, polymerization to formation of a magnet chain, and actuation to differential bending).\nDue to the unavailability of the desired magnets, alternative 1 was attempted, in which a 3D animation was produced. However, this method is also flawed as the computing power was not sufficient for a smooth animation. Hence, it is decided that the polymerization process will be demonstrated with a diagram (alternative 2). The demonstrations for other processes (doping and actuation) remain unchanged.\nThe materials were then ordered a month before the presentation, including an Elegoo electronics starter kit, a sponge, and a bimetallic strip. In addition, the 3D models were also completed: [img]Finally, due to the potential complexity of the subject, the presentation will be done with slides.",
             "Materials": "SCH4U_Summ_Proj_Materials.jpg",
             "3D Structures": ["Pyrrole-screenshot.jpg", "Pyrrole_cation-screenshot.jpg", "Pyrrole_dimer-screenshot.jpg"],
             "3D Structures with Van der Waals Forces": ["Pyrrole_with_VdW-screenshot.jpg", "Pyrrole_cation_with_VdW-screenshot.jpg", "Pyrrole_dimer_with_VdW-screenshot.jpg"]
+        },
+        "Research": {
+            "Topic": "Synthesis and Applications of Polypyrrole as An Active Material",
+            "Doc_link": "https://1drv.ms/w/c/b5933cfa18aa2826/IQTDR37YIxp0QZTQIxwArtDIASGE9l2Bl1o81G0KFEGMxxw?em=2"
+        },
+        "Slides": {
+            "Link": "https://www.canva.com/design/DAGp6ncGD9o/paQd7-ljqcPPd0GvlJkxLQ/view?embed"
         }
     },
     "MDM4U_Sum_Proj": {
