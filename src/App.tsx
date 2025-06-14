@@ -17,7 +17,7 @@ function App() {
       setBgImg("/PPP_SPH4U/Concorde_wing_CFD_20deg_frame_300.png");
     } else if (location.pathname.includes("GHP")) {
       setTitle("GHP");
-      setBgImg("Pong_preview.png");
+      setBgImg("/GHP_SCH4U/Page_cover.png");
     } else {
       setTitle("Porfolio Website");
       setBgImg("Pong_preview.png");
